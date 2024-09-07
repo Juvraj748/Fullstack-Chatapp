@@ -1,0 +1,4 @@
+run{
+	cd public && npm start
+	cd server && npm start
+}
