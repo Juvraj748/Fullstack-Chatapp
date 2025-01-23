@@ -34,7 +34,7 @@ const server = app.listen(port, () => {
 
 const io = socket(server, {
     cors:{
-        origin: "https://juvy-chat.vercel.app/",
+        origin: ["https://juvy-chat.vercel.app", "http://localhost:3000"],
         credentials: true
     }
 })
