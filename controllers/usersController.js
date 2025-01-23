@@ -39,7 +39,7 @@ module.exports.Login = async (req, res, next) => {
     try{
         const {email, password} = req.body;
     
-        let user = await User.findOne({ email }).lean();
+        let user = await User.findOne({ email: email.toLowerCase() }).lean();
 
         if(!user){
             return res.json({ msg: "Email does not exist", status: false });
