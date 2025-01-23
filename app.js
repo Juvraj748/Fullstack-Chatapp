@@ -18,7 +18,7 @@ app.use("/api/messages", messagesRouter);
 app.use(express.static(path.join(__dirname, "frontend/build")))
 
 const port = process.env.PORT || 8080;
-const mongoUrl = process.env.MONGO_URI
+const mongoUrl = process.env.MONGO_URL
 
 mongoose.connect(mongoUrl).then(()=>{
     console.log("Succesfully connected to MongoDB")
