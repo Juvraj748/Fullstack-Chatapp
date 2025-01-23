@@ -1,18 +1,21 @@
+require("dotenv").config()
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const userRouter = require("./routes/userRoutes");
 const messagesRouter = require("./routes/messagesRoutes");
-const socket = require("socket.io")
+const socket = require("socket.io");
+const path = require("path")
 
 const app = express();
-require("dotenv").config();
 
 app.use(cors());
 app.use(express.json());
 
 app.use("/api/auth", userRouter);
 app.use("/api/messages", messagesRouter);
+
+app.use(express.static(path.join(__dirname, "frontend/build")))
 
 const port = process.env.PORT || 8080;
 const mongoUrl = process.env.MONGO_URI

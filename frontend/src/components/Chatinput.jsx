@@ -87,7 +87,7 @@ const Container = styled.div`
         overflow: hidden;
         input{
             width: 90%;
-            height: 60%;
+            height: 100%;
             background-color: transparent;
             color: white;
             border: none;
@@ -101,7 +101,8 @@ const Container = styled.div`
             }
         }
         button{
-            padding: 0.3rem 1rem;
+            /* padding: 0.3rem 1rem; */
+            padding: 18px;
             border-radius: 2rem;
             display: flex;
             justify-content: center;

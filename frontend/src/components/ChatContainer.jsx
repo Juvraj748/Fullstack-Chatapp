@@ -101,7 +101,7 @@ const ChatContainer = ({ currentChat, currentUser, socket }) => {
 
 const Container = styled.div`
     display: grid;
-    grid-template-rows: 12vh 64vh;
+    grid-template-rows: 12vh 60vh;
     .chat-header{
         display: flex;
         justify-content: space-between;
